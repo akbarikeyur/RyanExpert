@@ -1,0 +1,57 @@
+/* 
+  Localizable.strings
+  Nurchure Admin
+
+  Created by Keyur on 23/03/20.
+  Copyright © 2020 Keyur. All rights reserved.
+*/
+
+//camera
+"take_photo" = "Take Photo";
+"gallry_photo" = "Choose Existing Photo";
+"cancel_button" = "Cancel";
+
+//Common
+"currency_aed" = "AED ";
+"just_now" = "Just Now";
+"second_sort" = "s";
+"minute_sort" = "m";
+"hour_sort" = "h";
+"day_sort" = "day";
+"days_sort" = "days";
+"week_sort" = "week";
+"weeks_sort" = "weeks";
+"month_sort" = "month";
+"months_sort" = "months";
+"year_sort" = "year";
+"years_sort" = "years";
+
+"second_word" = " Sec";
+"minute_word" = " Min";
+"hour_word" = " Hour";
+
+"AM" = " AM";
+"PM" = " PM";
+
+//Login
+"enter_email" = "Please enter email";
+"invalid_email" = "Invalid email";
+"enter_password" = "Please enter password";
+
+//Signup
+"enter_name" = "Please enter name";
+"enter_mobile" = "Please enter mobile number";
+"enter_confirm_password" = "Please enter confirm password";
+"password_confirm_password" = "Password and confirm password must be same";
+
+//Address
+"enter_house_no" = "Please enter House/Flat No./Office No.";
+"enter_street_name" = "Please enter Street name/Road Name";
+"enter_landmark" = "Please enter Landmark";
+"select_city" = "Please select city";
+
+//Detail
+"enter_location" = "Please enter location";
+"select_certificate" = "Please select certificate";
+"select_award" = "Please select award";
+"enter_speciality" = "Please enter your speciality";

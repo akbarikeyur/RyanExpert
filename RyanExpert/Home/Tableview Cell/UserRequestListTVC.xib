@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserRequestListTVC" id="KGk-i7-Jjw" customClass="UserRequestListTVC" customModule="RyanExpert" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medical Condition(s)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaP-gu-KU2" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                        <rect key="frame" x="10" y="5" width="135" height="30"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                        <color key="textColor" red="0.75686274509999996" green="0.2156862745" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                <integer key="value" value="9"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RN3-Ac-Uli" customClass="ImageView" customModule="RyanExpert" customModuleProvider="target">
+                        <rect key="frame" x="165" y="17.5" width="5" height="5"/>
+                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="iJA-Xv-Rfd"/>
+                            <constraint firstAttribute="height" constant="5" id="ido-Cv-iSN"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="2.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIV Positive" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCy-si-cJN" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                        <rect key="frame" x="175" y="5" width="135" height="30"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zDw-rh-SbV">
+                        <rect key="frame" x="10" y="39" width="300" height="1"/>
+                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="8Hc-X7-CuO"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="zDw-rh-SbV" secondAttribute="trailing" constant="10" id="2fw-Rj-vJQ"/>
+                    <constraint firstItem="rCy-si-cJN" firstAttribute="leading" secondItem="EaP-gu-KU2" secondAttribute="trailing" constant="30" id="BGm-O7-OHQ"/>
+                    <constraint firstItem="zDw-rh-SbV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="DZz-BL-GvU"/>
+                    <constraint firstAttribute="bottom" secondItem="rCy-si-cJN" secondAttribute="bottom" constant="5" id="Iji-0D-tK3"/>
+                    <constraint firstItem="rCy-si-cJN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="KlG-Wn-ged"/>
+                    <constraint firstItem="rCy-si-cJN" firstAttribute="width" secondItem="EaP-gu-KU2" secondAttribute="width" id="NfQ-9R-g5Y"/>
+                    <constraint firstAttribute="trailing" secondItem="rCy-si-cJN" secondAttribute="trailing" constant="10" id="UAq-LZ-Ixh"/>
+                    <constraint firstItem="rCy-si-cJN" firstAttribute="leading" secondItem="RN3-Ac-Uli" secondAttribute="trailing" constant="5" id="acq-xe-3TI"/>
+                    <constraint firstItem="EaP-gu-KU2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="fra-Xz-8Jm"/>
+                    <constraint firstItem="rCy-si-cJN" firstAttribute="centerY" secondItem="RN3-Ac-Uli" secondAttribute="centerY" id="jCh-3r-xbO"/>
+                    <constraint firstAttribute="bottom" secondItem="EaP-gu-KU2" secondAttribute="bottom" constant="5" id="nqC-Ed-HfT"/>
+                    <constraint firstAttribute="bottom" secondItem="zDw-rh-SbV" secondAttribute="bottom" id="oAX-7i-ujH"/>
+                    <constraint firstItem="EaP-gu-KU2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="yDa-7e-CZt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleLbl" destination="EaP-gu-KU2" id="ZLA-sk-ilQ"/>
+                <outlet property="valueLbl" destination="rCy-si-cJN" id="sZ9-Gz-3DF"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="154"/>
+        </tableViewCell>
+    </objects>
+</document>

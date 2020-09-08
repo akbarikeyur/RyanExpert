@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrainingSessionTVC" id="KGk-i7-Jjw" customClass="TrainingSessionTVC" customModule="RyanExpert" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8r-YY-9gA" customClass="View" customModule="RyanExpert" customModuleProvider="target">
+                        <rect key="frame" x="10" y="5" width="260" height="70"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvv-Sm-FMk" customClass="Button" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.75686274509999996" green="0.2156862745" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="mQ9-gE-3oo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20mins/Ksh 400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85X-0B-mQG" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="200" y="10" width="50" height="8.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="6"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.2156862745" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="as"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jane doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM2-np-1SF" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="70" y="7.5" width="61.5" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training Date: 4th July 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffo-Bg-iT5" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="70" y="28" width="137.5" height="14"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training time : 4..00pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtb-2Q-O7V" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="70" y="44" width="113.5" height="14"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dtb-2Q-O7V" secondAttribute="trailing" constant="50" id="9DR-r1-8q9"/>
+                            <constraint firstItem="Ffo-Bg-iT5" firstAttribute="leading" secondItem="cM2-np-1SF" secondAttribute="leading" id="DL5-Ma-Iok"/>
+                            <constraint firstItem="Ffo-Bg-iT5" firstAttribute="leading" secondItem="dvv-Sm-FMk" secondAttribute="trailing" constant="10" id="J53-3H-5Sx"/>
+                            <constraint firstAttribute="bottom" secondItem="Dtb-2Q-O7V" secondAttribute="bottom" constant="12" id="Od8-Cp-PFV"/>
+                            <constraint firstItem="dvv-Sm-FMk" firstAttribute="top" secondItem="b8r-YY-9gA" secondAttribute="top" constant="10" id="P9C-Rz-Ilw"/>
+                            <constraint firstItem="Dtb-2Q-O7V" firstAttribute="leading" secondItem="Ffo-Bg-iT5" secondAttribute="leading" id="VvC-C5-AUx"/>
+                            <constraint firstItem="Ffo-Bg-iT5" firstAttribute="top" secondItem="cM2-np-1SF" secondAttribute="bottom" constant="2" id="Wl0-wH-1eL"/>
+                            <constraint firstItem="cM2-np-1SF" firstAttribute="top" secondItem="b8r-YY-9gA" secondAttribute="top" constant="7.5" id="X9W-o1-2ew"/>
+                            <constraint firstItem="85X-0B-mQG" firstAttribute="top" secondItem="b8r-YY-9gA" secondAttribute="top" constant="10" id="h4i-vZ-yOz"/>
+                            <constraint firstAttribute="trailing" secondItem="85X-0B-mQG" secondAttribute="trailing" constant="10" id="kzZ-HE-ML8"/>
+                            <constraint firstAttribute="bottom" secondItem="dvv-Sm-FMk" secondAttribute="bottom" constant="10" id="lV1-xJ-rEV"/>
+                            <constraint firstItem="Ffo-Bg-iT5" firstAttribute="centerY" secondItem="dvv-Sm-FMk" secondAttribute="centerY" id="lj0-bG-jh5"/>
+                            <constraint firstItem="dvv-Sm-FMk" firstAttribute="leading" secondItem="b8r-YY-9gA" secondAttribute="leading" constant="10" id="ptH-GC-y7L"/>
+                            <constraint firstItem="85X-0B-mQG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cM2-np-1SF" secondAttribute="trailing" constant="10" id="rnc-em-uvK"/>
+                            <constraint firstItem="Dtb-2Q-O7V" firstAttribute="top" secondItem="Ffo-Bg-iT5" secondAttribute="bottom" constant="2" id="vHC-n2-3Wq"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderColorTypeAdapter">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8k-UH-9bJ" customClass="Button" customModule="RyanExpert" customModuleProvider="target">
+                        <rect key="frame" x="230" y="50" width="80" height="20"/>
+                        <color key="backgroundColor" red="0.47450980390000003" green="0.68235294120000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="RO4-lY-LNF"/>
+                            <constraint firstAttribute="width" constant="80" id="nhz-xl-xm7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="10"/>
+                        <state key="normal" title="Rescheduled"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="as"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="backgroundColorTypeAdapter">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="b8r-YY-9gA" secondAttribute="bottom" constant="5" id="ZVw-7k-d9C"/>
+                    <constraint firstAttribute="trailing" secondItem="b8r-YY-9gA" secondAttribute="trailing" constant="50" id="eXz-zj-upk"/>
+                    <constraint firstItem="b8r-YY-9gA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="fxR-tF-TlK"/>
+                    <constraint firstAttribute="bottom" secondItem="F8k-UH-9bJ" secondAttribute="bottom" constant="10" id="miY-Zg-FjI"/>
+                    <constraint firstAttribute="trailing" secondItem="F8k-UH-9bJ" secondAttribute="trailing" constant="10" id="nj8-g7-wcS"/>
+                    <constraint firstItem="b8r-YY-9gA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xWI-jb-Ogm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLbl" destination="Ffo-Bg-iT5" id="BmJ-Qv-6GF"/>
+                <outlet property="imgBtn" destination="dvv-Sm-FMk" id="bNN-UQ-0bJ"/>
+                <outlet property="nameLbl" destination="cM2-np-1SF" id="Kg3-xz-zf4"/>
+                <outlet property="priceLbl" destination="85X-0B-mQG" id="8TC-wh-W0C"/>
+                <outlet property="statusBtn" destination="F8k-UH-9bJ" id="EST-VP-Sx6"/>
+                <outlet property="timeLbl" destination="Dtb-2Q-O7V" id="pEX-A6-RgC"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="154"/>
+        </tableViewCell>
+    </objects>
+</document>

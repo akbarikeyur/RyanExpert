@@ -1,0 +1,56 @@
+PODS:
+  - Alamofire (4.9.1)
+  - DropDown (2.3.13)
+  - IQKeyboardManagerSwift (6.5.5)
+  - lottie-ios (3.1.8)
+  - MFSideMenu (0.5.5)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - PEPhotoCropEditor (1.3.1)
+  - SDWebImage (5.8.1):
+    - SDWebImage/Core (= 5.8.1)
+  - SDWebImage/Core (5.8.1)
+  - SKPhotoBrowser (6.1.0)
+  - Toast-Swift (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4)
+  - DropDown
+  - IQKeyboardManagerSwift
+  - lottie-ios
+  - MFSideMenu
+  - NVActivityIndicatorView
+  - PEPhotoCropEditor
+  - SDWebImage
+  - SKPhotoBrowser
+  - Toast-Swift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - DropDown
+    - IQKeyboardManagerSwift
+    - lottie-ios
+    - MFSideMenu
+    - NVActivityIndicatorView
+    - PEPhotoCropEditor
+    - SDWebImage
+    - SKPhotoBrowser
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  MFSideMenu: 268122e6894f2747fc3a2b48578100b232506c60
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  PEPhotoCropEditor: 613292fce009efd085e7aed975f1ebb3fec8bb7b
+  SDWebImage: e3eae2eda88578db0685a0c88597fdadd9433f05
+  SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+
+PODFILE CHECKSUM: 5f94bb700246cf435a2aabfbf9e49ef3bb576551
+
+COCOAPODS: 1.9.3

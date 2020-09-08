@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WelcomeCVC" customModule="RyanExpert" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercises" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xc-Jf-dqO" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                        <rect key="frame" x="10" y="70" width="300" height="34"/>
+                        <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ab"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="24"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Your Personalized Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxz-BT-eT1" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                        <rect key="frame" x="10" y="109" width="300" height="21"/>
+                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlN-ov-1Z8">
+                        <rect key="frame" x="20" y="150" width="280" height="230"/>
+                        <state key="normal" image="welcome1"/>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="FlN-ov-1Z8" firstAttribute="top" secondItem="Fxz-BT-eT1" secondAttribute="bottom" constant="20" id="DvX-JU-OP6"/>
+                <constraint firstAttribute="trailing" secondItem="Fxz-BT-eT1" secondAttribute="trailing" constant="10" id="E6A-W4-X3x"/>
+                <constraint firstAttribute="trailing" secondItem="FlN-ov-1Z8" secondAttribute="trailing" constant="20" id="Odd-Jg-NhC"/>
+                <constraint firstAttribute="trailing" secondItem="3xc-Jf-dqO" secondAttribute="trailing" constant="10" id="bOp-Hz-N5T"/>
+                <constraint firstItem="Fxz-BT-eT1" firstAttribute="top" secondItem="3xc-Jf-dqO" secondAttribute="bottom" constant="5" id="fPk-wK-FyY"/>
+                <constraint firstItem="3xc-Jf-dqO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="g2Y-Pk-piC"/>
+                <constraint firstItem="FlN-ov-1Z8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="qep-Aa-Wci"/>
+                <constraint firstAttribute="bottom" secondItem="FlN-ov-1Z8" secondAttribute="bottom" constant="20" id="sCf-4r-xfV"/>
+                <constraint firstItem="3xc-Jf-dqO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="70" id="u9Y-8a-Zqk"/>
+                <constraint firstItem="Fxz-BT-eT1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="wma-pL-dOI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imgBtn" destination="FlN-ov-1Z8" id="sTi-m2-6eM"/>
+                <outlet property="subTitleLbl" destination="Fxz-BT-eT1" id="lne-f1-yaI"/>
+                <outlet property="titleLbl" destination="3xc-Jf-dqO" id="d8t-KH-exF"/>
+            </connections>
+            <point key="canvasLocation" x="133" y="154"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="welcome1" width="250" height="198"/>
+    </resources>
+</document>

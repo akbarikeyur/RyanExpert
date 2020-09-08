@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionTVC" id="KGk-i7-Jjw" customClass="TransactionTVC" customModule="RyanExpert" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mfk-Ue-Q7w" customClass="View" customModule="RyanExpert" customModuleProvider="target">
+                        <rect key="frame" x="30" y="5" width="250" height="70"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oay-Y3-4h8" customClass="Button" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.75686274509999996" green="0.2156862745" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="N5J-SX-Ncm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jane doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fy3-A2-Xs3" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="70" y="7.5" width="170" height="18.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="am"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training Date: 4th July 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ht7-eK-gpF" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="70" y="28" width="117.5" height="14"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="ar"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20mins/Ksh 400" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NID-ed-8Ef" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="70" y="44" width="83" height="14"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="10"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.2156862745" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="as"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NID-ed-8Ef" firstAttribute="leading" secondItem="ht7-eK-gpF" secondAttribute="leading" id="CB9-lJ-DfL"/>
+                            <constraint firstItem="ht7-eK-gpF" firstAttribute="leading" secondItem="oay-Y3-4h8" secondAttribute="trailing" constant="10" id="GNg-gv-9l5"/>
+                            <constraint firstAttribute="trailing" secondItem="ht7-eK-gpF" secondAttribute="trailing" constant="62.5" id="HPT-o9-n9v"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NID-ed-8Ef" secondAttribute="trailing" constant="10" id="Hm5-Uk-lJv"/>
+                            <constraint firstAttribute="bottom" secondItem="NID-ed-8Ef" secondAttribute="bottom" constant="12" id="I9l-dc-EE3"/>
+                            <constraint firstItem="oay-Y3-4h8" firstAttribute="top" secondItem="Mfk-Ue-Q7w" secondAttribute="top" constant="10" id="IVb-GA-jOb"/>
+                            <constraint firstItem="ht7-eK-gpF" firstAttribute="top" secondItem="Fy3-A2-Xs3" secondAttribute="bottom" constant="2" id="KIo-YS-NAm"/>
+                            <constraint firstAttribute="trailing" secondItem="Fy3-A2-Xs3" secondAttribute="trailing" constant="10" id="Llm-f3-fG4"/>
+                            <constraint firstItem="ht7-eK-gpF" firstAttribute="centerY" secondItem="oay-Y3-4h8" secondAttribute="centerY" id="Via-vK-ENB"/>
+                            <constraint firstItem="Fy3-A2-Xs3" firstAttribute="top" secondItem="Mfk-Ue-Q7w" secondAttribute="top" constant="7.5" id="dlG-r1-UB0"/>
+                            <constraint firstItem="NID-ed-8Ef" firstAttribute="top" secondItem="ht7-eK-gpF" secondAttribute="bottom" constant="2" id="eh5-lw-Hkn"/>
+                            <constraint firstAttribute="bottom" secondItem="oay-Y3-4h8" secondAttribute="bottom" constant="10" id="geT-Pv-cXD"/>
+                            <constraint firstItem="oay-Y3-4h8" firstAttribute="leading" secondItem="Mfk-Ue-Q7w" secondAttribute="leading" constant="10" id="sj5-90-J0O"/>
+                            <constraint firstItem="ht7-eK-gpF" firstAttribute="leading" secondItem="Fy3-A2-Xs3" secondAttribute="leading" id="yiT-3b-nbb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderColorTypeAdapter">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLE-kZ-U9k" customClass="Button" customModule="RyanExpert" customModuleProvider="target">
+                        <rect key="frame" x="220" y="30" width="80" height="20"/>
+                        <color key="backgroundColor" red="0.47450980390000003" green="0.68235294120000001" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="6IP-DI-47L"/>
+                            <constraint firstAttribute="width" constant="80" id="Lfm-gc-jOP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="10"/>
+                        <state key="normal" title="Paid Mpesa"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="as"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="backgroundColorTypeAdapter">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="PLE-kZ-U9k" secondAttribute="trailing" constant="20" id="0Wo-km-for"/>
+                    <constraint firstAttribute="bottom" secondItem="Mfk-Ue-Q7w" secondAttribute="bottom" constant="5" id="2ZY-XB-fGL"/>
+                    <constraint firstItem="PLE-kZ-U9k" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FHb-f1-DFc"/>
+                    <constraint firstItem="Mfk-Ue-Q7w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="QZ4-oH-ZRq"/>
+                    <constraint firstAttribute="trailing" secondItem="Mfk-Ue-Q7w" secondAttribute="trailing" constant="40" id="l1r-Fp-ewg"/>
+                    <constraint firstItem="Mfk-Ue-Q7w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="o6O-9h-QqN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLbl" destination="ht7-eK-gpF" id="bQQ-BQ-q37"/>
+                <outlet property="imgBtn" destination="oay-Y3-4h8" id="2vN-I0-sPU"/>
+                <outlet property="nameLbl" destination="Fy3-A2-Xs3" id="Fae-G1-mN6"/>
+                <outlet property="priceLbl" destination="NID-ed-8Ef" id="s3B-wp-4mg"/>
+                <outlet property="statusBtn" destination="PLE-kZ-U9k" id="xHM-yl-yLA"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="154"/>
+        </tableViewCell>
+    </objects>
+</document>
