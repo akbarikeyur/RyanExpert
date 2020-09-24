@@ -17,7 +17,6 @@ class SelectLoginVC: UIViewController {
     }
     
     @IBAction func clickToLogin(_ sender: UIButton) {
-//        AppDelegate().sharedDelegate().navigateToDashBoard()
         let vc : MobileEmailLoginVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "MobileEmailLoginVC") as! MobileEmailLoginVC
         vc.type = sender.tag
         self.navigationController?.pushViewController(vc, animated: false)

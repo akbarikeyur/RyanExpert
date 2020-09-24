@@ -43,3 +43,31 @@ struct NotificationModel {
         date = dict["date"] as? String ?? ""
     }
 }
+
+struct BankModel {
+    var id : Int!
+    var accountName : String!
+    var accountNumber : String!
+    var bankBranch : String!
+    var bankCode : String!
+    var bankMobileNumber : String!
+    var bankName : String!
+    var branchCode : String!
+    var swiftCode : String!
+    
+    init(dict : [String : Any])
+    {
+        id = dict["id"] as? Int ?? 0
+        if let temp = dict["id"] as? String {
+            id = Int(temp)
+        }
+        accountName = dict["accountName"] as? String ?? ""
+        accountNumber = dict["accountNumber"] as? String ?? ""
+        bankBranch = dict["bankBranch"] as? String ?? ""
+        bankCode = dict["bankCode"] as? String ?? ""
+        bankMobileNumber = dict["bankMobileNumber"] as? String ?? ""
+        bankName = dict["bankName"] as? String ?? ""
+        branchCode = dict["branchCode"] as? String ?? ""
+        swiftCode = dict["swiftCode"] as? String ?? ""
+    }
+}

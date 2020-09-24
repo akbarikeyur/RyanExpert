@@ -35,7 +35,6 @@ class HomeVC: UIViewController {
         setupDetail()
         AppDelegate().sharedDelegate().serviceCallToGetData()
         refreshHomeData()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

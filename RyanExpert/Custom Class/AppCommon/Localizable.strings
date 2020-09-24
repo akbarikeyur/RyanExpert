@@ -55,3 +55,13 @@
 "select_certificate" = "Please select certificate";
 "select_award" = "Please select award";
 "enter_speciality" = "Please enter your speciality";
+
+//Bank Detail
+"add_bank_name" = "Please enter bank name";
+"add_bank_code" = "Please enter bank code";
+"add_swift_code" = "Please enter swift code";
+"add_bank_branch" = "Please enter bank branch";
+"add_branch_code" = "Please enter branch code";
+"add_account_name" = "Please enter account name";
+"add_account_number" = "Please enter account number";
+"add_mobile_number" = "Please enter mobile number";

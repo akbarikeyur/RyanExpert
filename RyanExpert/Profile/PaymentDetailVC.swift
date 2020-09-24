@@ -19,13 +19,15 @@ class PaymentDetailVC: UIViewController {
     @IBOutlet weak var bankBranchLbl: Label!
     @IBOutlet weak var accountNumberLbl: Label!
     
+    var bankData = BankModel.init(dict: [String : Any]())
+    var mpesaNumber = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         serviceCallToGetPaymentDetails()
-        mpesaView.isHidden = true
-        bankView.isHidden = true
+        self.setupDetail()
     }
     
     //MARK:- Button click event
@@ -38,7 +40,9 @@ class PaymentDetailVC: UIViewController {
     }
     
     @IBAction func clickToEditBank(_ sender: Any) {
-        
+        let vc : AddBankDetailVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "AddBankDetailVC") as! AddBankDetailVC
+        vc.bankData = bankData
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     /*
@@ -57,7 +61,31 @@ extension PaymentDetailVC {
     
     func serviceCallToGetPaymentDetails() {
         APIManager.shared.serviceCallToGetPaymentDetails { (dict) in
-            
+            if let bank = dict["bank"] as? [String : Any] {
+                self.bankData = BankModel.init(dict: bank)
+            }
+            if let mpesa = dict["mpesa"] as? [String : Any] {
+                self.mpesaNumber = mpesa["mobileNumber"] as? String ?? ""
+            }
+            self.setupDetail()
+        }
+    }
+    
+    func setupDetail() {
+        if bankData.id == 0 {
+            bankView.isHidden = true
+        }else{
+            bankView.isHidden = false
+            bankNameLbl.text = bankData.bankName
+            bankBranchLbl.text = bankData.bankBranch
+            accountNumberLbl.text = bankData.accountNumber
+        }
+        
+        if mpesaNumber == "" {
+            mpesaView.isHidden = true
+        }else{
+            mpesaView.isHidden = false
+            mpesaNumberLbl.text = mpesaNumber
         }
     }
 }

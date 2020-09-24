@@ -34,7 +34,7 @@ struct API {
     //Bank
     static let GET_PAYMENT_DETAIL                   =       BASE_URL + "profile/paymentDetails"
     static let ADD_MPESA_ACCOUNT                    =       BASE_URL + "profile​/paymentDetails/mpesa"
-    static let ADD_BANK_ACCOUNT                     =       BASE_URL + "profile​/paymentDetails/bank"
+    static let ADD_BANK_ACCOUNT                     =       BASE_URL + "profile/paymentDetails/bank"
     
     //Default
     static let GET_CMS_DATA                         =       BASE_URL + "cms"
@@ -293,7 +293,19 @@ public class APIManager {
         callGetRequest(API.GET_PAYMENT_DETAIL, false) { (dict) in
             printData(dict)
             if let status = dict["status"] as? Int, status == 1 {
-                completion(dict)
+                if let bankDict = dict["bankdetails"] as? [String : Any] {
+                    completion(bankDict)
+                    return
+                }
+            }
+        }
+    }
+    
+    func serviceCallToAddBank(_ param : [String  :Any],  _ completion: @escaping () -> Void) {
+        callPostRequest(API.ADD_BANK_ACCOUNT, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? Int, status == 1 {
+                completion()
                 return
             }
         }

@@ -85,6 +85,7 @@
 		792E23BD24D7B4C200221696 /* MobileLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E23BB24D7B4C100221696 /* MobileLoginVC.swift */; };
 		792E23BE24D7B4C200221696 /* VerifyOtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E23BC24D7B4C200221696 /* VerifyOtpVC.swift */; };
 		7936C6ED250254E000D5D0D7 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936C6EC250254E000D5D0D7 /* EditProfileVC.swift */; };
+		793F6B7A2508B2010036CF10 /* AddBankDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793F6B792508B2010036CF10 /* AddBankDetailVC.swift */; };
 		79422DE324E11C18003A741D /* StartSessionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79422DE224E11C18003A741D /* StartSessionVC.swift */; };
 		79422DE524E11D48003A741D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79422DE424E11D48003A741D /* Profile.storyboard */; };
 		7952A32824E0244200BE7154 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7952A32724E0244200BE7154 /* SideMenuVC.swift */; };
@@ -207,6 +208,7 @@
 		792E23BB24D7B4C100221696 /* MobileLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MobileLoginVC.swift; path = ../../../RyanUser/RyanUser/Login/MobileLoginVC.swift; sourceTree = "<group>"; };
 		792E23BC24D7B4C200221696 /* VerifyOtpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyOtpVC.swift; sourceTree = "<group>"; };
 		7936C6EC250254E000D5D0D7 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		793F6B792508B2010036CF10 /* AddBankDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBankDetailVC.swift; sourceTree = "<group>"; };
 		79422DE224E11C18003A741D /* StartSessionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSessionVC.swift; sourceTree = "<group>"; };
 		79422DE424E11D48003A741D /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7952A32724E0244200BE7154 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
@@ -533,6 +535,7 @@
 				7991FAAA24E3A6140065D73E /* FaqsVC.swift */,
 				7991FAB024E3A73C0065D73E /* AboutUsVC.swift */,
 				7991FAB224E3A7CA0065D73E /* ContactUsVC.swift */,
+				793F6B792508B2010036CF10 /* AddBankDetailVC.swift */,
 				7991FAB624E3A8C80065D73E /* API Model */,
 				7991FAA524E3A4CC0065D73E /* Tableview Cell */,
 			);
@@ -723,6 +726,7 @@
 				7991FAA824E3A4E70065D73E /* CustomNotificationTVC.swift in Sources */,
 				792E239024D7A65500221696 /* CustomDashedView.swift in Sources */,
 				7952A32F24E0382300BE7154 /* UserRequestListTVC.swift in Sources */,
+				793F6B7A2508B2010036CF10 /* AddBankDetailVC.swift in Sources */,
 				792E239124D7A65500221696 /* GlobalConstant.swift in Sources */,
 				792E23B324D7AA8F00221696 /* WelcomeCVC.swift in Sources */,
 				792E23BD24D7B4C200221696 /* MobileLoginVC.swift in Sources */,
