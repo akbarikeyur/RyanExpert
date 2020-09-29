@@ -430,3 +430,37 @@ func setTextFieldPlaceholderColor(_ textField : UITextField, _ color : UIColor)
         textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder!, attributes: [NSAttributedString.Key.foregroundColor: color])
     }
 }
+
+func displayTrainerId(_ id : String) -> String {
+    var finalId = "TR"
+    if id.count == 1 {
+        finalId = finalId + "000" + id
+    }
+    else if id.count == 2 {
+        finalId = finalId + "00" + id
+    }
+    else if id.count == 3 {
+        finalId = finalId + "0" + id
+    }
+    else {
+        finalId = finalId + id
+    }
+    return finalId
+}
+
+func displayNutritionId(_ id : String) -> String {
+    var finalId = "NU"
+    if id.count == 1 {
+        finalId = finalId + "000" + id
+    }
+    else if id.count == 2 {
+        finalId = finalId + "00" + id
+    }
+    else if id.count == 3 {
+        finalId = finalId + "0" + id
+    }
+    else {
+        finalId = finalId + id
+    }
+    return finalId
+}

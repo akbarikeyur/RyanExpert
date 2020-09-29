@@ -50,6 +50,7 @@ class EmailSignupVC: UIViewController {
             param["password"] = passwordTxt.text
             param["device_id"] = DEVICE_ID
             param["device_type"] = "I"
+            param["expertType"] = USER_TYPE
             APIManager.shared.serviceCallToSignupEmail(param) { (status) in
                 self.loader.stopAnimating()
                 displaySubViewWithScaleInAnim(self.verifyView)

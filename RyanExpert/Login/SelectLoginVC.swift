@@ -8,6 +8,13 @@
 
 import UIKit
 
+var USER_TYPE = ""
+
+struct TYPE {
+    static let TRAINER = "TRAINER"
+    static let NUTRITIONIST = "NUTRITIONIST"
+}
+
 class SelectLoginVC: UIViewController {
 
     override func viewDidLoad() {
@@ -17,8 +24,12 @@ class SelectLoginVC: UIViewController {
     }
     
     @IBAction func clickToLogin(_ sender: UIButton) {
+        if sender.tag == 1 {
+            USER_TYPE = TYPE.TRAINER
+        }else{
+            USER_TYPE = TYPE.NUTRITIONIST
+        }
         let vc : MobileEmailLoginVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "MobileEmailLoginVC") as! MobileEmailLoginVC
-        vc.type = sender.tag
         self.navigationController?.pushViewController(vc, animated: false)
     }
     

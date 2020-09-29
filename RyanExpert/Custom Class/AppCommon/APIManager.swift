@@ -23,10 +23,11 @@ struct API {
     //Profile
     static let GET_PROFILE                          =       BASE_URL + "profile"
     static let UPLOAD_IMAGE                         =       BASE_URL + "profile/image"
-    static let UPDATE_ONLINE_STATUS                 =       BASE_URL + "profile/image"
+    static let UPDATE_ONLINE_STATUS                 =       BASE_URL + "profile/isOnline"
     
     //Session
     static let GET_SESSION                          =       BASE_URL + "sessions"
+    static let GET_REQUESTED_SESSION                =       BASE_URL + "sessions/requested"
     
     //Notification
     static let NOTIFICATION                         =       BASE_URL + "notifications"
@@ -202,13 +203,24 @@ public class APIManager {
     //MARK:- Session
     func serviceCallToGetSession(_ start : Int, _ completion: @escaping (_ data : [[String : Any]], _ is_last : Bool) -> Void) {
         let strUrl = API.GET_SESSION + "?start=" + String(start) + "&limit=" + String(CONSTANT.LIMIT_DATA)
-        callGetRequest(strUrl, false) { (dict) in
+        callGetRequest(strUrl, (start == 0)) { (dict) in
             printData(dict)
             if let status = dict["status"] as? Int, status == 1 {
                 if let is_last = dict["is_last"] as? Bool {
                     if let data = dict["sessions"] as? [[String : Any]] {
                         completion(data, is_last)
                     }
+                }
+            }
+        }
+    }
+    
+    func serviceCallToGetRequestedSession(_ completion: @escaping (_ data : [[String : Any]]) -> Void) {
+        callGetRequest(API.GET_REQUESTED_SESSION, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? Int, status == 1 {
+                if let data = dict["sessions"] as? [[String : Any]] {
+                    completion(data)
                 }
             }
         }

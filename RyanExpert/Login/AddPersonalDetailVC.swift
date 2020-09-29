@@ -64,6 +64,9 @@ class AddPersonalDetailVC: UIViewController {
             param["location"] = locationTxt.text
             param["certificationDocuments"] = ""
             param["awards"] = ""
+            if AppModel.shared.currentUser.expertType == "" && USER_TYPE != "" {
+                param["expertType"] = USER_TYPE
+            }
             do {
                 if certificateUrl != nil {
                     if let fileData = try Data(contentsOf: certificateUrl!) as? Data {

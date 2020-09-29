@@ -11,6 +11,7 @@ import UIKit
 class ProfileVC: UIViewController {
 
     @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var userIdLbl: Label!
     @IBOutlet weak var nameLbl: Label!
     @IBOutlet weak var specialityLbl: Label!
     @IBOutlet weak var phoneLbl: Label!
@@ -39,6 +40,11 @@ class ProfileVC: UIViewController {
     
     @objc func setupDetails() {
         setImageBackgroundImage(profileImg, AppModel.shared.currentUser.image, IMAGE.PLACEHOLDER)
+        if AppModel.shared.currentUser.expertType == TYPE.TRAINER {
+            userIdLbl.text = displayTrainerId(AppModel.shared.currentUser.id)
+        }else {
+            userIdLbl.text = displayNutritionId(AppModel.shared.currentUser.id)
+        }
         nameLbl.text = AppModel.shared.currentUser.fullName
         emailLbl.text = AppModel.shared.currentUser.email
         phoneLbl.text = AppModel.shared.currentUser.mobileNumber

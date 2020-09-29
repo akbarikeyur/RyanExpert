@@ -21,9 +21,11 @@ class HomeVC: UIViewController {
     @IBOutlet weak var constraintHeightPendingTblView: NSLayoutConstraint!
     @IBOutlet weak var trainingTblView: UITableView!
     @IBOutlet weak var constraintHeightTrainingTblView: NSLayoutConstraint!
+    @IBOutlet weak var noDataLbl: Label!
     
     var isOnline = true
     var startCnt = 0
+    var arrPendingSessionData = [SessionModel]()
     var arrSessionData = [SessionModel]()
     
     override func viewDidLoad() {
@@ -31,19 +33,31 @@ class HomeVC: UIViewController {
 
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(setupDetail), name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
-        registerTableViewMethod()
+        setUIDesigning()
         setupDetail()
         AppDelegate().sharedDelegate().serviceCallToGetData()
-        refreshHomeData()
+        refreshPendingSessionData()
+        refreshSessionData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         AppDelegate().sharedDelegate().showTabBar()
     }
     
+    func setUIDesigning() {
+        noDataLbl.isHidden = true
+        registerTableViewMethod()
+        constraintHeightPendingTblView.constant = 0
+        constraintHeightTrainingTblView.constant = 0
+    }
+    
     @objc func setupDetail() {
         setImageBackgroundImage(userImgView, AppModel.shared.currentUser.image, "")
-        userIdLbl.text = String(AppModel.shared.currentUser.id)
+        if AppModel.shared.currentUser.expertType == TYPE.TRAINER {
+            userIdLbl.text = displayTrainerId(AppModel.shared.currentUser.id)
+        }else {
+            userIdLbl.text = displayNutritionId(AppModel.shared.currentUser.id)
+        }
         nameLbl.text = AppModel.shared.currentUser.fullName
         subTitleLbl.text = AppModel.shared.currentUser.speciality
         locationLbl.text = AppModel.shared.currentUser.location
@@ -56,11 +70,16 @@ class HomeVC: UIViewController {
             onlineBtn.setTitle("Go Offline", for: .normal)
             onlineBtn.backgroundColor = GreenColor
         }
+        
     }
     
-    func refreshHomeData() {
+    func refreshSessionData() {
         startCnt = 0
         serviceCallToGetSession()
+    }
+    
+    func refreshPendingSessionData() {
+        serviceCallToGetRequestedSession()
     }
     
     //MARK:- Button click event
@@ -105,15 +124,13 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     func registerTableViewMethod() {
         pendingTblView.register(UINib.init(nibName: "PendingSessionTVC", bundle: nil), forCellReuseIdentifier: "PendingSessionTVC")
         trainingTblView.register(UINib.init(nibName: "TrainingSessionTVC", bundle: nil), forCellReuseIdentifier: "TrainingSessionTVC")
-        constraintHeightPendingTblView.constant = 80 * 2
-        constraintHeightTrainingTblView.constant = 80 * 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == pendingTblView {
-            return 2
+            return arrPendingSessionData.count
         }
-        return 3
+        return arrSessionData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -158,7 +175,30 @@ extension HomeVC {
             for temp in data {
                 self.arrSessionData.append(SessionModel.init(dict: temp))
             }
+            self.trainingTblView.reloadData()
+            if self.arrSessionData.count > 0 {
+                self.constraintHeightTrainingTblView.constant = CGFloat(80 * self.arrSessionData.count) + 48
+            }else {
+                self.constraintHeightTrainingTblView.constant = 0
+            }
+            self.noDataLbl.isHidden = !(self.arrSessionData.count == 0 && self.arrPendingSessionData.count == 0)
+        }
+    }
+    
+    func serviceCallToGetRequestedSession() {
+        APIManager.shared.serviceCallToGetRequestedSession { (data) in
+            self.arrPendingSessionData = [SessionModel]()
+            for temp in data {
+                self.arrPendingSessionData.append(SessionModel.init(dict: temp))
+            }
             self.pendingTblView.reloadData()
+            if self.arrPendingSessionData.count > 0 {
+                self.constraintHeightPendingTblView.constant = CGFloat(80 * self.arrPendingSessionData.count) + 28
+            }else{
+                self.constraintHeightPendingTblView.constant = 0
+            }
+            
+            self.noDataLbl.isHidden = !(self.arrSessionData.count == 0 && self.arrPendingSessionData.count == 0)
         }
     }
 }

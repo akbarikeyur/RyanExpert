@@ -20,7 +20,7 @@ class VerifyOtpVC: UIViewController {
     
     var mobile = ""
     var otpTime : Timer?
-    var second = 30
+    var second = 60
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,7 +91,7 @@ class VerifyOtpVC: UIViewController {
     {
         if otpTime != nil {
             otpTime?.invalidate()
-            second = 30
+            second = 60
         }
         otpTime = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
             if self.second == 0 {

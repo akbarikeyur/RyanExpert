@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -192,65 +192,75 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending Session Requests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FZ-Vi-HJK" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="110" width="260" height="17"/>
-                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
-                                                                <integer key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="as"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                                <real key="value" value="12"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ysu-WA-bxs">
-                                                        <rect key="frame" x="10" y="132" width="260" height="1"/>
-                                                        <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="1" id="s9X-EC-xca"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TPE-FA-Xro">
-                                                        <rect key="frame" x="0.0" y="138" width="280" height="52"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCl-pA-BLI">
+                                                        <rect key="frame" x="0.0" y="110" width="280" height="80"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending Session Requests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FZ-Vi-HJK" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                                                                <rect key="frame" x="10" y="0.0" width="260" height="17"/>
+                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                                                        <integer key="value" value="2"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="as"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                                        <real key="value" value="12"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ysu-WA-bxs">
+                                                                <rect key="frame" x="10" y="22" width="260" height="1"/>
+                                                                <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="s9X-EC-xca"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TPE-FA-Xro">
+                                                                <rect key="frame" x="0.0" y="28" width="280" height="52"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="sps-ma-6JR" id="VRD-KN-PhT"/>
+                                                                    <outlet property="delegate" destination="sps-ma-6JR" id="011-Ky-2n0"/>
+                                                                </connections>
+                                                            </tableView>
+                                                        </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="edg-QG-CmU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="TPE-FA-Xro" secondAttribute="trailing" id="05z-rF-pMV"/>
+                                                            <constraint firstAttribute="bottom" secondItem="TPE-FA-Xro" secondAttribute="bottom" id="1Yj-W7-FsY"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ysu-WA-bxs" secondAttribute="trailing" constant="10" id="7Fe-Vo-CpL"/>
+                                                            <constraint firstItem="9FZ-Vi-HJK" firstAttribute="leading" secondItem="qCl-pA-BLI" secondAttribute="leading" constant="10" id="Hlh-BD-OYd"/>
+                                                            <constraint firstItem="TPE-FA-Xro" firstAttribute="leading" secondItem="qCl-pA-BLI" secondAttribute="leading" id="L8Z-Ap-ItD"/>
+                                                            <constraint firstItem="Ysu-WA-bxs" firstAttribute="leading" secondItem="qCl-pA-BLI" secondAttribute="leading" constant="10" id="Pjy-CU-8DO"/>
+                                                            <constraint firstAttribute="trailing" secondItem="9FZ-Vi-HJK" secondAttribute="trailing" constant="10" id="VZE-3o-rQY"/>
+                                                            <constraint firstAttribute="height" constant="80" id="aQf-hl-412"/>
+                                                            <constraint firstItem="Ysu-WA-bxs" firstAttribute="top" secondItem="9FZ-Vi-HJK" secondAttribute="bottom" constant="5" id="gcY-sz-7hR"/>
+                                                            <constraint firstItem="9FZ-Vi-HJK" firstAttribute="top" secondItem="qCl-pA-BLI" secondAttribute="top" id="uHM-qP-bCp"/>
+                                                            <constraint firstItem="TPE-FA-Xro" firstAttribute="top" secondItem="Ysu-WA-bxs" secondAttribute="bottom" constant="5" id="ukf-9c-KX5"/>
                                                         </constraints>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="sps-ma-6JR" id="VRD-KN-PhT"/>
-                                                            <outlet property="delegate" destination="sps-ma-6JR" id="011-Ky-2n0"/>
-                                                        </connections>
-                                                    </tableView>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="Ysu-WA-bxs" firstAttribute="leading" secondItem="Zdd-dl-Pdj" secondAttribute="leading" constant="10" id="64s-h4-Ahg"/>
                                                     <constraint firstItem="kRg-xd-TOJ" firstAttribute="leading" secondItem="Zdd-dl-Pdj" secondAttribute="leading" constant="140" id="8g2-7j-Pjc"/>
-                                                    <constraint firstItem="Ysu-WA-bxs" firstAttribute="top" secondItem="9FZ-Vi-HJK" secondAttribute="bottom" constant="5" id="B1H-R5-FdC"/>
-                                                    <constraint firstItem="9FZ-Vi-HJK" firstAttribute="leading" secondItem="Zdd-dl-Pdj" secondAttribute="leading" constant="10" id="BUD-K4-Kf0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="qCl-pA-BLI" secondAttribute="bottom" constant="10" id="Awm-6q-tjV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qCl-pA-BLI" secondAttribute="trailing" id="Fu4-0t-zbG"/>
                                                     <constraint firstItem="kRg-xd-TOJ" firstAttribute="trailing" secondItem="r3u-dN-i0J" secondAttribute="trailing" id="GHZ-dd-bzJ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Ysu-WA-bxs" secondAttribute="trailing" constant="10" id="H3y-d5-F3G"/>
-                                                    <constraint firstAttribute="trailing" secondItem="9FZ-Vi-HJK" secondAttribute="trailing" constant="10" id="HGj-GE-qR3"/>
                                                     <constraint firstItem="r3u-dN-i0J" firstAttribute="top" secondItem="kRg-xd-TOJ" secondAttribute="bottom" id="Jg4-Kw-6cx"/>
-                                                    <constraint firstAttribute="trailing" secondItem="TPE-FA-Xro" secondAttribute="trailing" id="JxF-jz-Ihh"/>
                                                     <constraint firstItem="D9d-oJ-ZcF" firstAttribute="leading" secondItem="Zdd-dl-Pdj" secondAttribute="leading" constant="150" id="LLL-8P-RkS"/>
                                                     <constraint firstItem="kRg-xd-TOJ" firstAttribute="leading" secondItem="r3u-dN-i0J" secondAttribute="leading" id="Lhe-Sw-nW8"/>
-                                                    <constraint firstItem="TPE-FA-Xro" firstAttribute="top" secondItem="Ysu-WA-bxs" secondAttribute="bottom" constant="5" id="QQ1-dx-vII"/>
                                                     <constraint firstItem="dK3-pg-2go" firstAttribute="top" secondItem="r3u-dN-i0J" secondAttribute="bottom" id="TeF-2a-tMO"/>
                                                     <constraint firstItem="dK3-pg-2go" firstAttribute="leading" secondItem="r3u-dN-i0J" secondAttribute="leading" id="Tp7-wj-WkZ"/>
+                                                    <constraint firstItem="qCl-pA-BLI" firstAttribute="top" secondItem="dK3-pg-2go" secondAttribute="bottom" constant="10" id="UCD-ER-saC"/>
                                                     <constraint firstItem="I9s-1b-Nf8" firstAttribute="top" secondItem="r3u-dN-i0J" secondAttribute="bottom" constant="2.5" id="Zq3-EW-se1"/>
                                                     <constraint firstItem="I9s-1b-Nf8" firstAttribute="leading" secondItem="dK3-pg-2go" secondAttribute="trailing" constant="5" id="ag3-dX-tDq"/>
-                                                    <constraint firstAttribute="bottom" secondItem="TPE-FA-Xro" secondAttribute="bottom" constant="10" id="bcT-ka-K1G"/>
                                                     <constraint firstItem="D9d-oJ-ZcF" firstAttribute="top" secondItem="Zdd-dl-Pdj" secondAttribute="top" constant="10" id="cIV-bi-TRM"/>
                                                     <constraint firstAttribute="trailing" secondItem="kRg-xd-TOJ" secondAttribute="trailing" constant="10" id="cif-Zh-I6C"/>
-                                                    <constraint firstItem="9FZ-Vi-HJK" firstAttribute="top" secondItem="dK3-pg-2go" secondAttribute="bottom" constant="10" id="dx2-wD-d9a"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I9s-1b-Nf8" secondAttribute="trailing" constant="10" id="fV6-zN-9xv"/>
+                                                    <constraint firstItem="qCl-pA-BLI" firstAttribute="leading" secondItem="Zdd-dl-Pdj" secondAttribute="leading" id="h36-IM-nU2"/>
                                                     <constraint firstItem="kRg-xd-TOJ" firstAttribute="top" secondItem="D9d-oJ-ZcF" secondAttribute="bottom" id="m4X-p7-rYh"/>
-                                                    <constraint firstItem="TPE-FA-Xro" firstAttribute="leading" secondItem="Zdd-dl-Pdj" secondAttribute="leading" id="pwZ-D8-Qq1"/>
                                                     <constraint firstAttribute="trailing" secondItem="D9d-oJ-ZcF" secondAttribute="trailing" constant="10" id="ySZ-G6-QQj"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -376,9 +386,6 @@
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Sd-Xu-cff">
                                                         <rect key="frame" x="0.0" y="38" width="300" height="184"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="184" id="yEO-dF-bZD"/>
-                                                        </constraints>
                                                         <connections>
                                                             <outlet property="dataSource" destination="sps-ma-6JR" id="McB-wo-YfM"/>
                                                             <outlet property="delegate" destination="sps-ma-6JR" id="lAh-BH-CmA"/>
@@ -390,6 +397,7 @@
                                                     <constraint firstItem="kvt-xt-UDf" firstAttribute="top" secondItem="Cyx-TJ-fFJ" secondAttribute="top" constant="10" id="1AK-qO-9CT"/>
                                                     <constraint firstAttribute="trailing" secondItem="c7e-cq-j2e" secondAttribute="trailing" constant="10" id="1cM-ML-Pkm"/>
                                                     <constraint firstItem="c7e-cq-j2e" firstAttribute="top" secondItem="kvt-xt-UDf" secondAttribute="bottom" constant="5" id="8m8-VV-Rkk"/>
+                                                    <constraint firstAttribute="height" constant="232" id="CaR-HH-Kaw"/>
                                                     <constraint firstAttribute="trailing" secondItem="kvt-xt-UDf" secondAttribute="trailing" constant="10" id="P5d-hQ-4vN"/>
                                                     <constraint firstItem="9Sd-Xu-cff" firstAttribute="top" secondItem="c7e-cq-j2e" secondAttribute="bottom" constant="5" id="QFz-hR-aZj"/>
                                                     <constraint firstItem="kvt-xt-UDf" firstAttribute="leading" secondItem="Cyx-TJ-fFJ" secondAttribute="leading" constant="10" id="VhN-9m-tgO"/>
@@ -425,26 +433,45 @@
                                     <constraint firstAttribute="bottom" secondItem="AFl-gZ-Esg" secondAttribute="bottom" id="yDa-4x-dXe"/>
                                 </constraints>
                             </scrollView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any session" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0g-gJ-dqD" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="20" y="274" width="280" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="as"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="vL4-oY-rt3" firstAttribute="trailing" secondItem="Y0g-gJ-dqD" secondAttribute="trailing" constant="20" id="0aP-7v-R3T"/>
                             <constraint firstItem="EeT-xl-pq8" firstAttribute="top" secondItem="xiR-ap-fZk" secondAttribute="bottom" id="Lpk-eb-nrM"/>
                             <constraint firstItem="EeT-xl-pq8" firstAttribute="bottom" secondItem="vL4-oY-rt3" secondAttribute="bottom" id="ONv-ln-Ycj"/>
                             <constraint firstItem="xiR-ap-fZk" firstAttribute="leading" secondItem="hNa-m3-812" secondAttribute="leading" id="YrP-WO-rEC"/>
                             <constraint firstItem="EeT-xl-pq8" firstAttribute="leading" secondItem="vL4-oY-rt3" secondAttribute="leading" id="cNU-Ct-H4s"/>
                             <constraint firstItem="xiR-ap-fZk" firstAttribute="top" secondItem="vL4-oY-rt3" secondAttribute="top" constant="20" id="mYa-50-s24"/>
                             <constraint firstItem="EeT-xl-pq8" firstAttribute="trailing" secondItem="vL4-oY-rt3" secondAttribute="trailing" id="rgR-x1-7zo"/>
+                            <constraint firstItem="Y0g-gJ-dqD" firstAttribute="centerY" secondItem="hNa-m3-812" secondAttribute="centerY" id="xD1-tn-VlQ"/>
                             <constraint firstItem="vL4-oY-rt3" firstAttribute="trailing" secondItem="xiR-ap-fZk" secondAttribute="trailing" id="xan-PD-tw6"/>
+                            <constraint firstItem="Y0g-gJ-dqD" firstAttribute="leading" secondItem="vL4-oY-rt3" secondAttribute="leading" constant="20" id="yip-hk-zd7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vL4-oY-rt3"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="Q1S-rI-GCR"/>
                     <connections>
-                        <outlet property="constraintHeightPendingTblView" destination="edg-QG-CmU" id="gLI-mX-dfA"/>
-                        <outlet property="constraintHeightTrainingTblView" destination="yEO-dF-bZD" id="vfZ-WG-kj6"/>
+                        <outlet property="constraintHeightPendingTblView" destination="aQf-hl-412" id="B41-jb-08D"/>
+                        <outlet property="constraintHeightTrainingTblView" destination="CaR-HH-Kaw" id="s1M-53-rEV"/>
                         <outlet property="locationLbl" destination="I9s-1b-Nf8" id="MzW-nM-t7i"/>
                         <outlet property="nameLbl" destination="kRg-xd-TOJ" id="UYU-oQ-gWO"/>
+                        <outlet property="noDataLbl" destination="Y0g-gJ-dqD" id="3iA-kl-67a"/>
                         <outlet property="onlineBtn" destination="aIo-9z-TJo" id="mrl-cx-Xui"/>
                         <outlet property="pendingTblView" destination="TPE-FA-Xro" id="WLe-pS-F2Z"/>
                         <outlet property="subTitleLbl" destination="r3u-dN-i0J" id="raW-3T-Khr"/>
@@ -1013,13 +1040,10 @@ Connecting you with trainee……</string>
                                 <rect key="frame" x="0.0" y="60" width="320" height="508"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t1h-cB-89x" customClass="View" customModule="RyanExpert" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="300" height="232"/>
+                                        <rect key="frame" x="10" y="10" width="300" height="252"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending Sessions Requests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IR-8w-Krx" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="10" width="280" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="17" id="JBv-Tb-Czc"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1043,9 +1067,6 @@ Connecting you with trainee……</string>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m5A-1e-3uT">
                                                 <rect key="frame" x="0.0" y="38" width="300" height="184"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="184" id="rdc-eN-QqD"/>
-                                                </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="YYe-F5-kMt" id="5sI-Y9-MWQ"/>
                                                     <outlet property="delegate" destination="YYe-F5-kMt" id="akG-1Z-UYr"/>
@@ -1058,7 +1079,8 @@ Connecting you with trainee……</string>
                                             <constraint firstAttribute="trailing" secondItem="0IR-8w-Krx" secondAttribute="trailing" constant="10" id="4sU-ZY-fDE"/>
                                             <constraint firstItem="m5A-1e-3uT" firstAttribute="top" secondItem="NnX-T6-eob" secondAttribute="bottom" constant="5" id="6ec-TN-6Z7"/>
                                             <constraint firstAttribute="trailing" secondItem="NnX-T6-eob" secondAttribute="trailing" constant="10" id="7ke-dS-Z6J"/>
-                                            <constraint firstAttribute="bottom" secondItem="m5A-1e-3uT" secondAttribute="bottom" constant="10" id="DZI-ov-sae"/>
+                                            <constraint firstAttribute="height" constant="252" id="B4L-ms-lVC"/>
+                                            <constraint firstAttribute="bottom" secondItem="m5A-1e-3uT" secondAttribute="bottom" constant="30" id="DZI-ov-sae"/>
                                             <constraint firstItem="NnX-T6-eob" firstAttribute="leading" secondItem="t1h-cB-89x" secondAttribute="leading" constant="10" id="G7j-a4-hl2"/>
                                             <constraint firstAttribute="trailing" secondItem="m5A-1e-3uT" secondAttribute="trailing" id="SBo-ll-mQJ"/>
                                             <constraint firstItem="NnX-T6-eob" firstAttribute="top" secondItem="0IR-8w-Krx" secondAttribute="bottom" constant="5" id="aTB-fN-ohZ"/>
@@ -1067,13 +1089,10 @@ Connecting you with trainee……</string>
                                         </constraints>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Awx-oM-2gZ" customClass="View" customModule="RyanExpert" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="266" width="300" height="232"/>
+                                        <rect key="frame" x="10" y="262" width="300" height="236"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Training Sessions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EER-tK-0s7" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="10" width="280" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="17" id="DrG-ve-qD9"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1095,11 +1114,8 @@ Connecting you with trainee……</string>
                                                 </constraints>
                                             </imageView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8eu-Du-scf">
-                                                <rect key="frame" x="0.0" y="38" width="300" height="184"/>
+                                                <rect key="frame" x="0.0" y="38" width="300" height="188"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="184" id="YUA-jl-yvt"/>
-                                                </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="YYe-F5-kMt" id="0Zn-1h-7Za"/>
                                                     <outlet property="delegate" destination="YYe-F5-kMt" id="Z8X-s7-DnF"/>
@@ -1109,6 +1125,7 @@ Connecting you with trainee……</string>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="JpK-FL-lpy" secondAttribute="trailing" constant="10" id="6Xh-uA-znI"/>
+                                            <constraint firstAttribute="height" constant="236" id="8Tj-eI-rOR"/>
                                             <constraint firstItem="EER-tK-0s7" firstAttribute="leading" secondItem="Awx-oM-2gZ" secondAttribute="leading" constant="10" id="B3N-fn-oiF"/>
                                             <constraint firstItem="JpK-FL-lpy" firstAttribute="top" secondItem="EER-tK-0s7" secondAttribute="bottom" constant="5" id="DBV-yx-Nex"/>
                                             <constraint firstItem="JpK-FL-lpy" firstAttribute="leading" secondItem="Awx-oM-2gZ" secondAttribute="leading" constant="10" id="Lzt-jd-wDB"/>
@@ -1129,17 +1146,35 @@ Connecting you with trainee……</string>
                                     <constraint firstItem="t1h-cB-89x" firstAttribute="top" secondItem="X38-Um-zIu" secondAttribute="top" constant="10" id="dwb-cU-s5t"/>
                                     <constraint firstItem="Awx-oM-2gZ" firstAttribute="leading" secondItem="X38-Um-zIu" secondAttribute="leading" constant="10" id="juH-eQ-6lp"/>
                                     <constraint firstItem="t1h-cB-89x" firstAttribute="leading" secondItem="X38-Um-zIu" secondAttribute="leading" constant="10" id="sLM-eX-Sg1"/>
-                                    <constraint firstItem="Awx-oM-2gZ" firstAttribute="top" secondItem="t1h-cB-89x" secondAttribute="bottom" constant="24" id="zgC-8M-5zh"/>
+                                    <constraint firstItem="Awx-oM-2gZ" firstAttribute="top" secondItem="t1h-cB-89x" secondAttribute="bottom" id="zgC-8M-5zh"/>
                                 </constraints>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no any session" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyL-Sg-fnh" customClass="Label" customModule="RyanExpert" customModuleProvider="target">
+                                <rect key="frame" x="10" y="274" width="300" height="20"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="textColorTypeAdapter">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fontTypeAdapter" value="as"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="SEX-ot-Lsa" firstAttribute="trailing" secondItem="stf-Yn-vXh" secondAttribute="trailing" id="33C-WQ-KdS"/>
                             <constraint firstItem="SEX-ot-Lsa" firstAttribute="trailing" secondItem="X38-Um-zIu" secondAttribute="trailing" id="IPC-P4-fm5"/>
+                            <constraint firstItem="OyL-Sg-fnh" firstAttribute="centerY" secondItem="N7t-dc-rIK" secondAttribute="centerY" id="SO9-Ns-Eyj"/>
                             <constraint firstItem="stf-Yn-vXh" firstAttribute="leading" secondItem="N7t-dc-rIK" secondAttribute="leading" id="TZA-su-Fui"/>
                             <constraint firstItem="X38-Um-zIu" firstAttribute="leading" secondItem="SEX-ot-Lsa" secondAttribute="leading" id="hEM-mA-ncf"/>
+                            <constraint firstItem="OyL-Sg-fnh" firstAttribute="leading" secondItem="SEX-ot-Lsa" secondAttribute="leading" constant="10" id="izZ-eH-xMP"/>
                             <constraint firstItem="SEX-ot-Lsa" firstAttribute="bottom" secondItem="X38-Um-zIu" secondAttribute="bottom" id="mmg-w7-AHr"/>
+                            <constraint firstItem="SEX-ot-Lsa" firstAttribute="trailing" secondItem="OyL-Sg-fnh" secondAttribute="trailing" constant="10" id="qe0-NR-98Y"/>
                             <constraint firstItem="X38-Um-zIu" firstAttribute="top" secondItem="stf-Yn-vXh" secondAttribute="bottom" id="xVu-tM-VEz"/>
                             <constraint firstItem="stf-Yn-vXh" firstAttribute="top" secondItem="SEX-ot-Lsa" secondAttribute="top" constant="20" id="zZ1-aD-zbe"/>
                         </constraints>
@@ -1147,10 +1182,13 @@ Connecting you with trainee……</string>
                     </view>
                     <navigationItem key="navigationItem" id="24N-QB-GkI"/>
                     <connections>
-                        <outlet property="constraintHeightRecentTblView" destination="YUA-jl-yvt" id="EKo-9S-p03"/>
-                        <outlet property="constraintHeightTrainingTblView" destination="rdc-eN-QqD" id="PmB-df-gOj"/>
+                        <outlet property="constraintHeightPendingTblView" destination="B4L-ms-lVC" id="yl1-Z0-O3T"/>
+                        <outlet property="constraintHeightRecentTblView" destination="8Tj-eI-rOR" id="Cei-Xg-wbb"/>
+                        <outlet property="noDataLbl" destination="OyL-Sg-fnh" id="GsX-h0-iej"/>
+                        <outlet property="pendingTblView" destination="m5A-1e-3uT" id="t4d-OZ-hAg"/>
+                        <outlet property="pendingView" destination="t1h-cB-89x" id="MIT-lb-VB6"/>
                         <outlet property="recentTblView" destination="8eu-Du-scf" id="qPd-aO-yGI"/>
-                        <outlet property="trainingTblView" destination="m5A-1e-3uT" id="4CC-bY-zPg"/>
+                        <outlet property="recentView" destination="Awx-oM-2gZ" id="qp3-lp-EHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLY-yM-S5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

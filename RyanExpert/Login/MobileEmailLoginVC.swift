@@ -9,8 +9,6 @@
 import UIKit
 
 class MobileEmailLoginVC: UIViewController {
-
-    var type = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
