@@ -11,6 +11,7 @@ import UIKit
 class CustomNotificationTVC: UITableViewCell {
 
     @IBOutlet weak var titleLbl: Label!
+    @IBOutlet weak var dateLbl: Label!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +20,8 @@ class CustomNotificationTVC: UITableViewCell {
 
     func setupDetail(_ dict : NotificationModel) {
         titleLbl.text = dict.message
+        let date = getDateFromTimeStamp(dict.date)
+        dateLbl.text = getDateStringFromDate(date: date, format: "MMM dd, hh:mm a")
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

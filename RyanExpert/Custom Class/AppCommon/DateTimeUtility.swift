@@ -20,7 +20,7 @@ func getTimestampFromDate(date : Date) -> Double
 
 func getDateFromTimeStamp(_ timeStemp:Double) -> Date
 {
-    return Date(timeIntervalSince1970: TimeInterval(timeStemp/1000))
+    return Date(timeIntervalSince1970: TimeInterval(timeStemp))
 }
 
 func getDateStringFromServerTimeStemp(_ timeStemp:Double) -> String {

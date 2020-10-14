@@ -26,15 +26,6 @@ class AddBankDetailVC: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        bankNameTxt.text = "ICICI"
-        bankCodeTxt.text = "ICICI123"
-        swiftCodeTxt.text = "123456"
-        bankBranchTxt.text = "ICICI"
-        branchCodeTxt.text = "ICICI123456"
-        accountNameTxt.text = "TEST YEAR"
-        accountNameTxt.text = "12345678900001"
-        mobileTxt.text = "9865326598"
-        
         if bankData.id != 0 {
             setupDetail()
         }
@@ -91,13 +82,14 @@ class AddBankDetailVC: UIViewController {
             param["branchCode"] = branchCodeTxt.text
             param["accountName"] = accountNameTxt.text
             param["accountNumber"] = accountNumberTxt.text
-            param["mobileNumber"] = mobileTxt.text
+            param["bankMobileNumber"] = mobileTxt.text
             
-            if bankData.id != 0 {
-                param["id"] = bankData.id
-            }
-            
+//            if bankData.id != 0 {
+//                param["id"] = bankData.id
+//            }
+            printData(param)
             APIManager.shared.serviceCallToAddBank(param) {
+                NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.REFRESH_PAYMENT_DETAILS), object: nil)
                 self.navigationController?.popViewController(animated: true)
             }
         }

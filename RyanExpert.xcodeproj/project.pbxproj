@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18F0565A253081D300623473 /* AddEditMPesaNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F05659253081D300623473 /* AddEditMPesaNumberVC.swift */; };
 		790C51CC24F02C3E00C4DCFD /* KeyboardDigitCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790C51CA24F02C3E00C4DCFD /* KeyboardDigitCVC.xib */; };
 		790C51CD24F02C3E00C4DCFD /* KeyboardDigitCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790C51CB24F02C3E00C4DCFD /* KeyboardDigitCVC.swift */; };
 		790C51CF24F0350200C4DCFD /* EmailLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790C51CE24F0350200C4DCFD /* EmailLoginVC.swift */; };
@@ -124,6 +125,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18F05659253081D300623473 /* AddEditMPesaNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditMPesaNumberVC.swift; sourceTree = "<group>"; };
 		65B38CEDF04A7838668AEFDE /* Pods_RyanExpert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanExpert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790C51CA24F02C3E00C4DCFD /* KeyboardDigitCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardDigitCVC.xib; sourceTree = "<group>"; };
 		790C51CB24F02C3E00C4DCFD /* KeyboardDigitCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardDigitCVC.swift; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 				7991FAB024E3A73C0065D73E /* AboutUsVC.swift */,
 				7991FAB224E3A7CA0065D73E /* ContactUsVC.swift */,
 				793F6B792508B2010036CF10 /* AddBankDetailVC.swift */,
+				18F05659253081D300623473 /* AddEditMPesaNumberVC.swift */,
 				7991FAB624E3A8C80065D73E /* API Model */,
 				7991FAA524E3A4CC0065D73E /* Tableview Cell */,
 			);
@@ -764,6 +767,7 @@
 				7991FABA24E3A8D50065D73E /* ProfileModel.swift in Sources */,
 				792E237224D7A65500221696 /* UIColor+RUI.swift in Sources */,
 				792E238E24D7A65500221696 /* ImageView.swift in Sources */,
+				18F0565A253081D300623473 /* AddEditMPesaNumberVC.swift in Sources */,
 				792E236D24D7A65500221696 /* UIDevice+Type.swift in Sources */,
 				792E239224D7A65500221696 /* DateTimeUtility.swift in Sources */,
 				792E238524D7A65500221696 /* DatePicker.swift in Sources */,

@@ -69,7 +69,7 @@ struct CONSTANT{
     
     static let IMAGE_QUALITY   =  1
     
-    static let CURRENCY   =  "$"
+    static let CURRENCY   =  "Ksh"
     static let DIST_MEASURE   =  "km"
     static let TIME_ZONE = "Australia/Sydney"
     
@@ -88,7 +88,7 @@ struct MEDIA {
 }
 
 struct IMAGE {
-    static var USER_PLACEHOLDER = ""
+    static var USER_PLACEHOLDER = "temp_user"
     static var PLACEHOLDER = "ic_placeholder"
 }
 
@@ -104,6 +104,8 @@ struct NOTIFICATION {
     static var REDICT_TAB_BAR               =   "REDICT_TAB_BAR"
     static var NOTIFICATION_TAB_CLICK       =   "NOTIFICATION_TAB_CLICK"
     static var PAYMENT_SUCCESS              =   "PAYMENT_SUCCESS"
+    static var REFRESH_SESSION_LIST         =   "REFRESH_SESSION_LIST"
+    static var REFRESH_PAYMENT_DETAILS      =   "REFRESH_PAYMENT_DETAILS"
 }
 
 

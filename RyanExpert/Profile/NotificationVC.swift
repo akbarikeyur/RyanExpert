@@ -13,7 +13,7 @@ class NotificationVC: UIViewController {
     @IBOutlet weak var pauseSwitch: UISwitch!
     @IBOutlet weak var tblView: UITableView!
     
-    var startCnt = 0
+    var startCnt = 1
     var arrNotification = [NotificationModel]()
     
     override func viewDidLoad() {
@@ -73,16 +73,26 @@ extension NotificationVC : UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if startCnt != 0 && indexPath.row == arrNotification.count - 1{
+            startCnt += 1
+            serviceCallToGetNotification()
+        }
+    }
 }
 
 extension NotificationVC {
     func serviceCallToGetNotification() {
         APIManager.shared.serviceCallToGetNotification(startCnt) { (data, isLast) in
-            if self.startCnt == 0 {
+            if self.startCnt == 1 {
                 self.arrNotification = [NotificationModel]()
             }
             for temp in data {
                 self.arrNotification.append(NotificationModel.init(dict: temp))
+            }
+            if data.count == 0 {
+                self.startCnt = 0
             }
             self.tblView.reloadData()
         }

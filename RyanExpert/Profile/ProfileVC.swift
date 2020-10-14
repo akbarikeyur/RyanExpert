@@ -22,6 +22,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var certificateLbl: Label!
     @IBOutlet weak var feedbackLbl: Label!
     @IBOutlet weak var bankView: View!
+    @IBOutlet weak var noBankLbl: Label!
     @IBOutlet weak var bank_phoneLbl: Label!
     @IBOutlet weak var bank_acNumberLbl: Label!
     @IBOutlet weak var bank_acNameLbl: Label!
@@ -64,11 +65,14 @@ class ProfileVC: UIViewController {
         
         if getBankDetail().count == 0 {
             bankView.isHidden = true
+            noBankLbl.text = "No bank details added."
         }else{
             bankView.isHidden = false
-//            bank_phoneLbl.text = "Phone Number     +234 709 898 09"
-//            bank_acNumberLbl.text = "Bank Account     0600 8790 89876"
-//            bank_acNameLbl.text = "Payable Account     LISA PATEL"
+            noBankLbl.text = ""
+            let bank = BankModel.init(dict: getBankDetail())
+            bank_phoneLbl.text = "Phone Number     " + bank.bankMobileNumber
+            bank_acNumberLbl.text = "Bank Account     " + bank.accountNumber
+            bank_acNameLbl.text = "Payable Account     " + bank.accountName
         }
     }
     

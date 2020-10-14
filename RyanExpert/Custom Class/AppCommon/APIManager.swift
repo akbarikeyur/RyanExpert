@@ -26,7 +26,7 @@ struct API {
     static let UPDATE_ONLINE_STATUS                 =       BASE_URL + "profile/isOnline"
     
     //Session
-    static let GET_SESSION                          =       BASE_URL + "sessions"
+    static let SESSION                              =       BASE_URL + "sessions"
     static let GET_REQUESTED_SESSION                =       BASE_URL + "sessions/requested"
     
     //Notification
@@ -202,8 +202,8 @@ public class APIManager {
     
     //MARK:- Session
     func serviceCallToGetSession(_ start : Int, _ completion: @escaping (_ data : [[String : Any]], _ is_last : Bool) -> Void) {
-        let strUrl = API.GET_SESSION + "?start=" + String(start) + "&limit=" + String(CONSTANT.LIMIT_DATA)
-        callGetRequest(strUrl, (start == 0)) { (dict) in
+        let strUrl = API.SESSION + "?start=" + String(start) + "&limit=" + String(CONSTANT.LIMIT_DATA)
+        callGetRequest(strUrl, (start == 1)) { (dict) in
             printData(dict)
             if let status = dict["status"] as? Int, status == 1 {
                 if let is_last = dict["is_last"] as? Bool {
@@ -225,6 +225,28 @@ public class APIManager {
             }
         }
     }
+    
+    func serviceCallToAcceptRejectSession(_ userid : String, _ param : [String : Any], _ completion: @escaping () -> Void) {
+        let strUrl = API.SESSION + "/" + userid + "/status"
+        callPostRequest(strUrl, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? Int, status == 1 {
+                completion()
+                return
+            }
+        }
+    }
+    
+    func serviceCallToCancelSession(_ userid : String, _ completion: @escaping () -> Void) {
+           let strUrl = API.SESSION + "/" + userid + "/cancel"
+           callPostRequest(strUrl, [String : Any] () , true) { (dict) in
+               printData(dict)
+               if let status = dict["status"] as? Int, status == 1 {
+                   completion()
+                   return
+               }
+           }
+       }
     
     //MARK:- Profile
     func serviceCallToGetProfile() {
@@ -278,11 +300,11 @@ public class APIManager {
     //MARK:- Notification
     func serviceCallToGetNotification(_ start : Int, _ completion: @escaping (_ data : [[String : Any]], _ is_last : Bool) -> Void) {
         let strUrl = API.NOTIFICATION + "?start=" + String(start) + "&limit=" + String(CONSTANT.LIMIT_DATA)
-        callGetRequest(strUrl, true) { (dict) in
+        callGetRequest(strUrl, (start == 1)) { (dict) in
             printData(dict)
             if let status = dict["status"] as? Int, status == 1 {
                 if let is_last = dict["is_last"] as? Bool {
-                    if let data = dict["sessions"] as? [[String : Any]] {
+                    if let data = dict["notifications"] as? [[String : Any]] {
                         completion(data, is_last)
                     }
                 }
@@ -315,6 +337,17 @@ public class APIManager {
     
     func serviceCallToAddBank(_ param : [String  :Any],  _ completion: @escaping () -> Void) {
         callPostRequest(API.ADD_BANK_ACCOUNT, param, true) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? Int, status == 1 {
+                completion()
+                return
+            }
+        }
+    }
+    
+
+    func serviceCallToAddEditMpesa(_ param : [String  :Any],  _ completion: @escaping () -> Void) {
+        callPostRequest(API.ADD_MPESA_ACCOUNT, param, true) { (dict) in
             printData(dict)
             if let status = dict["status"] as? Int, status == 1 {
                 completion()

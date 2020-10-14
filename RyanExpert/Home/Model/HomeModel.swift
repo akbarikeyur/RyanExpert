@@ -9,19 +9,44 @@
 import Foundation
 
 struct SessionModel {
-    var id, dateTime, duration: Int!
-    var roomID: String!
+    var id: Int!
+    var dateTime : Double!
+    var duration, roomID: String!
     var price, status, paymentStatus: Int!
     var user: UserModel!
     
     init(dict : [String : Any])
     {
         id = dict["id"] as? Int ?? 0
-        dateTime = dict["dateTime"] as? Int ?? 0
-        duration = dict["duration"] as? Int ?? 0
+        dateTime = 0
+        if let temp = dict["dateTime"] as? Double {
+            dateTime = temp
+        }
+        else if let temp = dict["dateTime"] as? String, temp != "" {
+            dateTime = Double(temp)
+        }
+        duration = ""
+        if let temp = dict["duration"] as? String {
+            duration = temp
+        }
+        else if let temp = dict["duration"] as? Double {
+            duration = String(temp)
+        }
         roomID = dict["roomID"] as? String ?? ""
-        price = dict["price"] as? Int ?? 0
-        status = dict["status"] as? Int ?? 0
+        price = 0
+        if let temp = dict["price"] as? Int {
+            price = temp
+        }
+        else if let temp = dict["price"] as? String, temp != "" {
+            price = Int(temp)
+        }
+        status = 0
+        if let temp = dict["status"] as? Int {
+            status = temp
+        }
+        else if let temp = dict["status"] as? String, temp != "" {
+            status = Int(temp)
+        }
         paymentStatus = dict["paymentStatus"] as? Int ?? 0
         user = UserModel.init(dict: dict["user"] as? [String : Any] ?? [String : Any]())
     }

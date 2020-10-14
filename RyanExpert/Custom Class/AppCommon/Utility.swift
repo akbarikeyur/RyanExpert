@@ -94,19 +94,17 @@ func setImageAspectFit(_ imgView : UIImageView, _ strUrl : String, _ placeHolder
     }
 }
 
-func setButtonBackgroundImage(_ button : UIButton, _ strUrl : String)
+func setButtonBackgroundImage(_ button : UIButton, _ strUrl : String, _ placeHolderImg : String)
 {
     if strUrl == "" {
-        button.setBackgroundImage(UIImage.init(named: "avtar"), for: .normal)
+        button.setBackgroundImage(UIImage.init(named: placeHolderImg), for: .normal)
         return
     }
     button.sd_setBackgroundImage(with: URL(string: strUrl), for: UIControl.State.normal, completed: { (image, error, SDImageCacheType, url) in
         if image != nil{
             button.setBackgroundImage(image?.imageCropped(toFit: CGSize(width: button.frame.size.width, height: button.frame.size.height)), for: .normal)
-        }
-        else
-        {
-            button.setBackgroundImage(UIImage.init(named: "avtar"), for: .normal)
+        }else{
+            button.setBackgroundImage(UIImage.init(named: placeHolderImg), for: .normal)
         }
     })
 }
@@ -463,4 +461,78 @@ func displayNutritionId(_ id : String) -> String {
         finalId = finalId + id
     }
     return finalId
+}
+
+func displayPriceWithCurrecny(_ price : String) -> String {
+    return CONSTANT.CURRENCY + " " + price
+}
+
+func displayDurationWithMinute(_ duration : String) -> String {
+    return duration + "Mins"
+}
+
+func getStatus(_ status : Int) -> String {
+    var value = ""
+    switch status {
+        case 0:
+            value = "View"
+            break
+        case 1:
+            value = "ACCEPTED"
+            break
+        case 2:
+            value = "DECLINED"
+            break
+        case 3:
+            value = "CANCELLED"
+            break
+        case 4:
+            value = "RESCHEDULE"
+            break
+        case 5:
+            value = "CANCELLED" //"CANCELLED BY USER"
+            break
+        case 6:
+            value = "COMPLETED"
+            break
+        case 7:
+            value = "EXPIRED"
+            break
+        default:
+            break
+    }
+    return value
+}
+
+func getStatusBackgroundColor(_ status : Int) -> UIColor {
+    var value = LightTextColor
+    switch status {
+        case 0:
+            value = GreenColor
+            break
+        case 1:
+            value = GreenColor
+            break
+        case 2:
+            value = GreenColor
+            break
+        case 3:
+            value = GreenColor
+            break
+        case 4:
+            value = GreenColor
+            break
+        case 5:
+            value = GreenColor
+            break
+        case 6:
+            value = GreenColor
+            break
+        case 7:
+            value = GreenColor
+            break
+        default:
+            break
+    }
+    return value
 }

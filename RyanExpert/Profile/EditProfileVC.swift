@@ -102,7 +102,6 @@ class EditProfileVC: UploadImageVC {
             param["location"] = locationTxt.text
             param["publishedArticles"] = articlesTxtView.text
             param["conferences"] = confTxt.text
-            param["expertType"] = "TRAINER"
             APIManager.shared.serviceCallToUpdateProfile(param) {
                 self.navigationController?.popViewController(animated: true)
             }

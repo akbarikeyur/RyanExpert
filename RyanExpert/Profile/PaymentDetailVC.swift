@@ -26,6 +26,7 @@ class PaymentDetailVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(serviceCallToGetPaymentDetails), name: NSNotification.Name.init(NOTIFICATION.REFRESH_PAYMENT_DETAILS), object: nil)
         serviceCallToGetPaymentDetails()
         self.setupDetail()
     }
@@ -36,7 +37,8 @@ class PaymentDetailVC: UIViewController {
     }
     
     @IBAction func clickToEditMpesa(_ sender: Any) {
-        
+        let vc : AddEditMPesaNumberVC = STORYBOARD.PROFILE.instantiateViewController(withIdentifier: "AddEditMPesaNumberVC") as! AddEditMPesaNumberVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func clickToEditBank(_ sender: Any) {
@@ -59,33 +61,27 @@ class PaymentDetailVC: UIViewController {
 
 extension PaymentDetailVC {
     
-    func serviceCallToGetPaymentDetails() {
+    @objc func serviceCallToGetPaymentDetails() {
         APIManager.shared.serviceCallToGetPaymentDetails { (dict) in
             if let bank = dict["bank"] as? [String : Any] {
+                setBankDetail(bank)
                 self.bankData = BankModel.init(dict: bank)
             }
             if let mpesa = dict["mpesa"] as? [String : Any] {
                 self.mpesaNumber = mpesa["mobileNumber"] as? String ?? ""
             }
+            NotificationCenter.default.post(name: NSNotification.Name.init(NOTIFICATION.UPDATE_CURRENT_USER_DATA), object: nil)
             self.setupDetail()
         }
     }
     
     func setupDetail() {
-        if bankData.id == 0 {
-            bankView.isHidden = true
-        }else{
-            bankView.isHidden = false
-            bankNameLbl.text = bankData.bankName
-            bankBranchLbl.text = bankData.bankBranch
-            accountNumberLbl.text = bankData.accountNumber
-        }
+        bankView.isHidden = false
+        bankNameLbl.text = bankData.bankName
+        bankBranchLbl.text = bankData.bankBranch
+        accountNumberLbl.text = bankData.accountNumber
         
-        if mpesaNumber == "" {
-            mpesaView.isHidden = true
-        }else{
-            mpesaView.isHidden = false
-            mpesaNumberLbl.text = mpesaNumber
-        }
+        mpesaView.isHidden = false
+        mpesaNumberLbl.text = mpesaNumber
     }
 }

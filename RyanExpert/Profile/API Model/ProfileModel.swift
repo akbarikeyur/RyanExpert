@@ -34,13 +34,13 @@ struct SettingModel {
 struct NotificationModel {
     var id : Int!
     var message : String!
-    var date : String!
+    var date : Double!
     
     init(dict : [String : Any])
     {
         id = dict["id"] as? Int ?? 0
         message = dict["message"] as? String ?? ""
-        date = dict["date"] as? String ?? ""
+        date = dict["date"] as? Double ?? 0
     }
 }
 

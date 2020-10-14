@@ -37,7 +37,12 @@ struct UserModel
     {
         id = dict["id"] as? String ?? ""
         age = dict["age"] as? Int ?? 0
-        fullName = dict["fullName"] as? String ?? ""
+        if let temp = dict["fullName"] as? String {
+            fullName = temp
+        }
+        else if let temp = dict["fullname"] as? String {
+            fullName = temp
+        }
         email = dict["email"] as? String ?? ""
         mobileNumber = dict["mobileNumber"] as? String ?? ""
         image = dict["image"] as? String ?? ""

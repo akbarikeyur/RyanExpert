@@ -11,6 +11,7 @@ import UIKit
 class ScheduleSessionVC: UIViewController {
 
     @IBOutlet weak var pendingView: View!
+    @IBOutlet weak var myScroll: UIScrollView!
     @IBOutlet weak var pendingTblView: UITableView!
     @IBOutlet weak var constraintHeightPendingTblView: NSLayoutConstraint!
     @IBOutlet weak var recentView: View!
@@ -18,20 +19,23 @@ class ScheduleSessionVC: UIViewController {
     @IBOutlet weak var constraintHeightRecentTblView: NSLayoutConstraint!
     @IBOutlet weak var noDataLbl: Label!
     
-    var startCnt = 0
+    var startCnt = 1
     var arrPendingSessionData = [SessionModel]()
     var arrSessionData = [SessionModel]()
+    var refreshConntrol = UIRefreshControl.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshSessionData), name: NSNotification.Name.init(NOTIFICATION.REFRESH_SESSION_LIST), object: nil)
+        noDataLbl.isHidden = true
         registerTableViewMethod()
-        pendingView.isHidden = true
-        constraintHeightPendingTblView.constant = 0
-        recentView.isHidden = true
-        constraintHeightRecentTblView.constant = 0
-        refreshPendingSessionData()
+        
+        refreshConntrol.tintColor = DarkRedColor
+        refreshConntrol.addTarget(self, action: #selector(refreshSessionData), for: .valueChanged)
+        myScroll.addSubview(refreshConntrol)
+        
         refreshSessionData()
     }
     
@@ -39,13 +43,10 @@ class ScheduleSessionVC: UIViewController {
         AppDelegate().sharedDelegate().showTabBar()
     }
     
-    func refreshSessionData() {
-        startCnt = 0
+    @objc func refreshSessionData() {
+        refreshConntrol.endRefreshing()
+        startCnt = 1
         serviceCallToGetSession()
-    }
-    
-    func refreshPendingSessionData() {
-        serviceCallToGetRequestedSession()
     }
     
     //MARK:- Button click event
@@ -73,6 +74,7 @@ extension ScheduleSessionVC : UITableViewDelegate, UITableViewDataSource {
     func registerTableViewMethod() {
         pendingTblView.register(UINib.init(nibName: "PendingSessionTVC", bundle: nil), forCellReuseIdentifier: "PendingSessionTVC")
         recentTblView.register(UINib.init(nibName: "TrainingSessionTVC", bundle: nil), forCellReuseIdentifier: "TrainingSessionTVC")
+        updateTableviewHeight()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,41 +91,61 @@ extension ScheduleSessionVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == pendingTblView {
             let cell : PendingSessionTVC = pendingTblView.dequeueReusableCell(withIdentifier: "PendingSessionTVC") as! PendingSessionTVC
-            
+            cell.setupDetails(arrPendingSessionData[indexPath.row])
             cell.selectionStyle = .none
             return cell
         }else{
             let cell : TrainingSessionTVC = recentTblView.dequeueReusableCell(withIdentifier: "TrainingSessionTVC") as! TrainingSessionTVC
-            if indexPath.row % 2 == 0 {
-                cell.statusBtn.setTitle("Completed", for: .normal)
-                cell.statusBtn.backgroundColor = GreenColor
-            }else{
-                cell.statusBtn.setTitle("Rescheduled", for: .normal)
-                cell.statusBtn.backgroundColor = LightTextColor
-            }
+            cell.setupDetails(arrSessionData[indexPath.row])
             cell.selectionStyle = .none
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var dict = SessionModel.init(dict: [String : Any]())
         if tableView == pendingTblView {
+            dict = arrPendingSessionData[indexPath.row]
+        }
+        else {
+            dict = arrSessionData[indexPath.row]
+        }
+        if dict.status == 0 {
             let vc : UserRequestVC = STORYBOARD.HOME.instantiateViewController(withIdentifier: "UserRequestVC") as! UserRequestVC
+            vc.sessionData = dict
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
+}
+
+extension ScheduleSessionVC {
+    func serviceCallToGetSession() {
+        APIManager.shared.serviceCallToGetSession(startCnt) { (data, is_last) in
+            if self.startCnt == 1 {
+                self.arrSessionData = [SessionModel]()
+                self.arrPendingSessionData = [SessionModel]()
+            }
+            for temp in data {
+                let session = SessionModel.init(dict: temp)
+                if session.status == 0 {
+                    self.arrPendingSessionData.append(session)
+                }else{
+                    self.arrSessionData.append(session)
+                }
+            }
+            self.updateTableviewHeight()
+        }
+    }
     
-    func updatePendingSessionViewHeight() {
+    func updateTableviewHeight() {
+        pendingTblView.reloadData()
         if arrPendingSessionData.count > 0 {
             self.constraintHeightPendingTblView.constant = CGFloat(80 * self.arrPendingSessionData.count) + 68
         }else {
             constraintHeightPendingTblView.constant = 0
         }
         pendingView.isHidden = (arrPendingSessionData.count == 0)
-        self.noDataLbl.isHidden = !(self.arrSessionData.count == 0 && self.arrPendingSessionData.count == 0)
-    }
-    
-    func updateRecentSessionViewHeight() {
+        recentTblView.reloadData()
         if arrSessionData.count > 0 {
             constraintHeightRecentTblView.constant = CGFloat(80 * self.arrSessionData.count) + 48
         }else {
@@ -131,33 +153,6 @@ extension ScheduleSessionVC : UITableViewDelegate, UITableViewDataSource {
         }
         recentView.isHidden = (arrSessionData.count == 0)
         self.noDataLbl.isHidden = !(self.arrSessionData.count == 0 && self.arrPendingSessionData.count == 0)
-    }
-}
-
-extension ScheduleSessionVC {
-    
-    func serviceCallToGetRequestedSession() {
-        APIManager.shared.serviceCallToGetRequestedSession { (data) in
-            self.arrPendingSessionData = [SessionModel]()
-            for temp in data {
-                self.arrPendingSessionData.append(SessionModel.init(dict: temp))
-            }
-            self.pendingTblView.reloadData()
-            self.updatePendingSessionViewHeight()
-        }
-    }
-    
-    func serviceCallToGetSession() {
-        APIManager.shared.serviceCallToGetSession(startCnt) { (data, is_last) in
-            if self.startCnt == 0 {
-                self.arrSessionData = [SessionModel]()
-            }
-            for temp in data {
-                self.arrSessionData.append(SessionModel.init(dict: temp))
-            }
-            self.recentTblView.reloadData()
-            self.updateRecentSessionViewHeight()
-        }
     }
     
 }
