@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>273860930110-fdksostp3438omru3oei8jip68jm7f4q.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.273860930110-fdksostp3438omru3oei8jip68jm7f4q</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>273860930110-047mj1c27h8vkk64s47tpo62f8e3pdm7.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAAW1ah7FpkvV4chQJUCRUc352M8FGFUm4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>273860930110</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.app.RyanUser</string>
+	<key>PROJECT_ID</key>
+	<string>ryan-sports-house</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ryan-sports-house.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:273860930110:ios:459630a1afa38827d43f6f</string>
+	<key>DATABASE_URL</key>
+	<string>https://ryan-sports-house.firebaseio.com</string>
+</dict>
+</plist>

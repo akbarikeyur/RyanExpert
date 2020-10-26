@@ -65,12 +65,14 @@ class VerifyOtpVC: UIViewController {
                 
                 delay(3.0) {
                     displaySubViewWithScaleInAnim(self.successView)
+                    AppDelegate().sharedDelegate().navigateToDashBoard()
                     if AppModel.shared.currentUser.location == "" {
                         let vc : AddPersonalDetailVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "AddPersonalDetailVC") as! AddPersonalDetailVC
                         self.navigationController?.pushViewController(vc, animated: true)
                     }
                     else{
-                        AppDelegate().sharedDelegate().navigateToDashBoard()
+                        AppDelegate().sharedDelegate().serviceCallToUpdateFcmToken()
+                        
                     }
                 }
             }

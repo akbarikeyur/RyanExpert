@@ -57,6 +57,19 @@ func getAuthToken() -> String
 }
 
 //MARK: - Push notification Token
+func setPushToken(_ value: String) {
+    setDataToPreference(data: value as AnyObject, forKey: "fcm_token")
+}
+
+func getPushToken() -> String
+{
+    if let token : String = getDataFromPreference(key: "fcm_token") as? String
+    {
+        return token
+    }
+    return ""
+}
+
 func setLoginUserData()
 {
     if AppModel.shared.currentUser != nil {

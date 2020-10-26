@@ -42,6 +42,7 @@ class EmailLoginVC: UIViewController {
             param["device_id"] = DEVICE_ID
             param["device_type"] = "I"
             APIManager.shared.serviceCallToLoginEmail(param) {
+                AppDelegate().sharedDelegate().serviceCallToUpdateFcmToken()
                 AppDelegate().sharedDelegate().navigateToDashBoard()
             }
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A4470C2546A3EA00013413 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18A4470B2546A3EA00013413 /* GoogleService-Info.plist */; };
 		18F0565A253081D300623473 /* AddEditMPesaNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F05659253081D300623473 /* AddEditMPesaNumberVC.swift */; };
 		790C51CC24F02C3E00C4DCFD /* KeyboardDigitCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 790C51CA24F02C3E00C4DCFD /* KeyboardDigitCVC.xib */; };
 		790C51CD24F02C3E00C4DCFD /* KeyboardDigitCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790C51CB24F02C3E00C4DCFD /* KeyboardDigitCVC.swift */; };
@@ -125,6 +126,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18A4470B2546A3EA00013413 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18F05659253081D300623473 /* AddEditMPesaNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditMPesaNumberVC.swift; sourceTree = "<group>"; };
 		65B38CEDF04A7838668AEFDE /* Pods_RyanExpert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RyanExpert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790C51CA24F02C3E00C4DCFD /* KeyboardDigitCVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardDigitCVC.xib; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				792E231824D7A43E00221696 /* Assets.xcassets */,
 				792E231A24D7A43E00221696 /* LaunchScreen.storyboard */,
 				792E231D24D7A43E00221696 /* Info.plist */,
+				18A4470B2546A3EA00013413 /* GoogleService-Info.plist */,
 				792E232324D7A65500221696 /* Custom Class */,
 			);
 			path = RyanExpert;
@@ -654,6 +657,7 @@
 				792E237C24D7A65500221696 /* Poppins-ExtraBold.ttf in Resources */,
 				792E237F24D7A65500221696 /* Poppins-SemiBold.ttf in Resources */,
 				792E23B424D7AA8F00221696 /* WelcomeCVC.xib in Resources */,
+				18A4470C2546A3EA00013413 /* GoogleService-Info.plist in Resources */,
 				792E237B24D7A65500221696 /* Poppins-Medium.ttf in Resources */,
 				792E238024D7A65500221696 /* Poppins-Italic.ttf in Resources */,
 				79422DE524E11D48003A741D /* Profile.storyboard in Resources */,

@@ -16,4 +16,6 @@ target 'RyanExpert' do
   pod 'SKPhotoBrowser'
   pod 'lottie-ios'
   pod 'MFSideMenu'
+  
+  pod 'Firebase/Messaging'
 end

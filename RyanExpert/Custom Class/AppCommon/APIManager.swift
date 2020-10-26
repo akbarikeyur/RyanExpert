@@ -24,6 +24,7 @@ struct API {
     static let GET_PROFILE                          =       BASE_URL + "profile"
     static let UPLOAD_IMAGE                         =       BASE_URL + "profile/image"
     static let UPDATE_ONLINE_STATUS                 =       BASE_URL + "profile/isOnline"
+    static let UPDATE_FCM_TOKEN                     =       BASE_URL + "profile/deviceeId"
     
     //Session
     static let SESSION                              =       BASE_URL + "sessions"
@@ -289,6 +290,16 @@ public class APIManager {
     
     func serviceCallToUpdateOnlineStatus(_ param : [String : Any], _ completion: @escaping () -> Void) {
         callPostRequest(API.UPDATE_ONLINE_STATUS, param, false) { (dict) in
+            printData(dict)
+            if let status = dict["status"] as? Int, status == 1 {
+                completion()
+                return
+            }
+        }
+    }
+    
+    func serviceCallToUpdateFcmToken(_ param : [String : Any], _ completion: @escaping () -> Void) {
+        callPostRequest(API.UPDATE_FCM_TOKEN, param, false) { (dict) in
             printData(dict)
             if let status = dict["status"] as? Int, status == 1 {
                 completion()
